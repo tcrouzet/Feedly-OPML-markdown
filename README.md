@@ -1,6 +1,12 @@
 # Feedly-OPML-markdown
 
+Convertir un 
 
+# Télécharger OPML Feddly dans ./data
+
+remplacer le feedly.opml existant
+
+https://feedly.com/i/opml
 
 ## Local install du script python on a Mac
 

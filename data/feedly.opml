@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Thierry subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Must Read" title="Must Read"/>
+        <outline text="NetLittérature" title="NetLittérature">
+            <outline type="rss" text="Le blog des écritures de Thierry Poncet" title="Le blog des écritures de Thierry Poncet" xmlUrl="http://blog.thierryponcet.net/feed" htmlUrl="https://blog.thierryponcet.net/"/>
+            <outline type="rss" text="Le Clavier Cannibale" title="Le Clavier Cannibale" xmlUrl="http://towardgrace.blogspot.com/feeds/posts/default" htmlUrl="https://towardgrace.blogspot.com/"/>
+            <outline type="rss" text="Sébastien Rongier (Fragments)" title="Sébastien Rongier (Fragments)" xmlUrl="http://sebastienrongier.net/spip.php?page=backend" htmlUrl="https://sebastienrongier.net/"/>
+            <outline type="rss" text="Orion en aéroplane" title="Orion en aéroplane" xmlUrl="http://peccadille.wordpress.com/feed/" htmlUrl="https://peccadille.wordpress.com"/>
+            <outline type="rss" text="Le bloc-note du desordre" title="Le bloc-note du desordre" xmlUrl="http://www.desordre.net/blog/spip.php?page=backend&amp;id_rubrique=1" htmlUrl="http://desordre.net/blog/"/>
+            <outline type="rss" text="en dehors" title="en dehors" xmlUrl="http://clayssen.paris/feed/" htmlUrl="http://clayssen.paris"/>
+            <outline type="rss" text="les choses dites" title="les choses dites" xmlUrl="http://leschosesdites.wordpress.com/feed/" htmlUrl="https://leschosesdites.wordpress.com"/>
+            <outline type="rss" text="E-Reading And RayTracing" title="E-Reading And RayTracing" xmlUrl="http://readingandraytracing.blogspot.com/feeds/posts/default" htmlUrl="http://readingandraytracing.blogspot.com/"/>
+            <outline type="rss" text="L'Écrivain Souterrain » Flux" title="L'Écrivain Souterrain » Flux" xmlUrl="https://ecrivain-souterrain.com/feed/" htmlUrl="https://ecrivain-souterrain.com"/>
+            <outline type="rss" text="Henri Loevenbruck (XML feed) (loevenbruck.org)" title="Henri Loevenbruck (XML feed) (loevenbruck.org)" xmlUrl="https://loevenbruck.org/feed/" htmlUrl="https://loevenbruck.org"/>
+            <outline type="rss" text="Actualitté" title="Actualitté" xmlUrl="https://www.actualitte.com/flux/rss/actualites.xml" htmlUrl="https://actualitte.com/"/>
+            <outline type="rss" text="Critical Margins" title="Critical Margins" xmlUrl="http://criticalmargins.com/feed/" htmlUrl="https://criticalmargins.com?source=rss----b5830299543c---4"/>
+            <outline type="rss" text="Léonel Houssam" title="Léonel Houssam" xmlUrl="http://leonel-houssam.blogspot.com/feeds/posts/default" htmlUrl="http://leonel-houssam.blogspot.com/"/>
+            <outline type="rss" text="The Literary Platform" title="The Literary Platform" xmlUrl="http://feeds.feedburner.com/TheLiteraryPlatform" htmlUrl="https://theliteraryplatform.com/"/>
+            <outline type="rss" text="Vivre" title="Vivre" xmlUrl="https://embrasure.wordpress.com/feed/" htmlUrl="https://embrasure.wordpress.com"/>
+            <outline type="rss" text="Marc Jahjah" title="Marc Jahjah" xmlUrl="http://www.marcjahjah.net/feed" htmlUrl="https://marcjahjah.net"/>
+            <outline type="rss" text="The Marginalian" title="The Marginalian" xmlUrl="http://feedproxy.google.com/brainpickings/rss" htmlUrl="https://www.themarginalian.org"/>
+            <outline type="rss" text="Le journal d'un lecteur" title="Le journal d'un lecteur" xmlUrl="http://journallecteur.blogspot.com/feeds/posts/default" htmlUrl="http://journallecteur.blogspot.com/"/>
+            <outline type="rss" text="Les Outils Tice" title="Les Outils Tice" xmlUrl="http://outilstice.com/feed/" htmlUrl="https://outilstice.com/"/>
+            <outline type="rss" text="Good E-Reader" title="Good E-Reader" xmlUrl="http://goodereader.com/blog/feed/" htmlUrl="https://goodereader.com/blog"/>
+            <outline type="rss" text="Petite Racine (Cécile Portier)" title="Petite Racine (Cécile Portier)" xmlUrl="http://petiteracine.net/wordpress/feed/" htmlUrl="http://petiteracine.net/wordpress"/>
+            <outline type="rss" text="Charlie's Diary" title="Charlie's Diary" xmlUrl="http://www.antipope.org/charlie/blog-static/atom.xml" htmlUrl="http://www.antipope.org/charlie/blog-static/"/>
+            <outline type="rss" text="Camille LEBOULANGER" title="Camille LEBOULANGER" xmlUrl="https://camilleleboulanger.fr/feed/" htmlUrl="https://camilleleboulanger.fr"/>
+            <outline type="rss" text="Les ateliers du déluge" title="Les ateliers du déluge" xmlUrl="https://les-ateliers-du-deluge.com/feed/" htmlUrl="https://les-ateliers-du-deluge.com"/>
+            <outline type="rss" text="Inventaire-du-monde" title="Inventaire-du-monde" xmlUrl="http://inventaire-du-monde.over-blog.com/rss-articles.xml" htmlUrl="https://inventaire-du-monde.over-blog.com/"/>
+            <outline type="rss" text="Les ateliers du déluge (Marlen Sauvage)" title="Les ateliers du déluge (Marlen Sauvage)" xmlUrl="http://les-ateliers-du-deluge.com/tag/marlen-sauvage/feed/" htmlUrl="https://les-ateliers-du-deluge.com"/>
+            <outline type="rss" text="BAZAR KAZAR" title="BAZAR KAZAR" xmlUrl="http://bazarkazar.com/feed/" htmlUrl="https://bazarkazar.com"/>
+            <outline type="rss" text="Stalker - Dissection du cadavre de la littérature" title="Stalker - Dissection du cadavre de la littérature" xmlUrl="http://www.juanasensio.com/atom.xml" htmlUrl="https://www.juanasensio.com/"/>
+            <outline type="rss" text="remue.net" title="remue.net" xmlUrl="http://remue.net/spip.php?page=backend" htmlUrl="https://remue.net/"/>
+            <outline type="rss" text="Jiminy Panoz" title="Jiminy Panoz" xmlUrl="http://jiminypanoz.com/feed/rss/" htmlUrl="http://jiminy.chapalpanoz.com/"/>
+            <outline type="rss" text="Grignotages de mimylasouris" title="Grignotages de mimylasouris" xmlUrl="http://grignotages-de-mimylasouris.blogspirit.com/atom.xml" htmlUrl="http://grignotages-de-mimylasouris.blogspirit.com/"/>
+            <outline type="rss" text="Nouveau et Cie. » Flux" title="Nouveau et Cie. » Flux" xmlUrl="https://germainnouveau.wordpress.com/feed/" htmlUrl="https://germainnouveau.wordpress.com"/>
+            <outline type="rss" text="Un Spicilège" title="Un Spicilège" xmlUrl="https://blogz.zaclys.com/un-spicilege/feed/" htmlUrl="https://blogz.zaclys.com/un-spicilege/"/>
+            <outline type="rss" text="Bajram.com" title="Bajram.com" xmlUrl="https://www.bajram.com/feed/" htmlUrl="https://www.bajram.com"/>
+            <outline type="rss" text="Nous sommes tous des presqu'îles" title="Nous sommes tous des presqu'îles" xmlUrl="http://juliettemezenc.wordpress.com/feed/" htmlUrl="https://juliettemezenc.wordpress.com"/>
+            <outline type="rss" text="Écriture et publication" title="Écriture et publication" xmlUrl="https://ecritureetpublication.wordpress.com/feed/" htmlUrl="https://ecritureetpublication.wordpress.com"/>
+            <outline type="rss" text="Éric Chevillard" title="Éric Chevillard" xmlUrl="http://l-autofictif.over-blog.com/rss-articles.xml" htmlUrl="https://l-autofictif.over-blog.com/"/>
+            <outline type="rss" text="marielebert.wordpress.com" title="marielebert.wordpress.com" xmlUrl="http://marielebert.wordpress.com/feed/" htmlUrl="https://marielebert.wordpress.com"/>
+            <outline type="rss" text="maison[s]témoin" title="maison[s]témoin" xmlUrl="http://www.maisonstemoin.fr/feed/" htmlUrl="https://www.maisonstemoin.fr"/>
+            <outline type="rss" text="BiblioMan(u)... le super" title="BiblioMan(u)... le super" xmlUrl="http://bibliomanu.blogspot.com/feeds/posts/default" htmlUrl="http://bibliomanu.blogspot.com/"/>
+            <outline type="rss" text="IDboox" title="IDboox" xmlUrl="http://www.idboox.com/feed/" htmlUrl="https://www.idboox.com/"/>
+            <outline type="rss" text="Monique Le Pailleur" title="Monique Le Pailleur" xmlUrl="http://eclectico.effetdesurprise.qc.ca/?feed=rss2" htmlUrl="https://eclectico.effetdesurprise.qc.ca"/>
+            <outline type="rss" text="Le goût des lettres" title="Le goût des lettres" xmlUrl="http://www.legoutdeslettres.com/feeds/posts/default?alt=rss" htmlUrl="https://www.legoutdeslettres.com/"/>
+            <outline type="rss" text="Biologeek-final.bak.2" title="Biologeek-final.bak.2" xmlUrl="http://www.biologeek.com/journal/rss.php" htmlUrl="https://larlet.fr/david/biologeek/"/>
+            <outline type="rss" text="Le Fictiologue" title="Le Fictiologue" xmlUrl="https://julienhirtauteur.com/feed/" htmlUrl="https://julienhirtauteur.com"/>
+            <outline type="rss" text="Dorian Lake" title="Dorian Lake" xmlUrl="http://dorianlake.blogspot.com/feeds/posts/default" htmlUrl="http://dorianlake.blogspot.com/"/>
+            <outline type="rss" text="Fenêtres open space" title="Fenêtres open space" xmlUrl="http://fenetresopenspace.blogspot.com/feeds/posts/default" htmlUrl="http://fenetresopenspace.blogspot.com/"/>
+            <outline type="rss" text="Oeuvres ouvertes" title="Oeuvres ouvertes" xmlUrl="http://www.oeuvresouvertes.net/spip.php?page=backend" htmlUrl="https://collegegeopoetique.com/"/>
+            <outline type="rss" text="Genlog" title="Genlog" xmlUrl="https://genlog.tcrouzet.com/rss_fr.xml" htmlUrl="https://genlog.tcrouzet.com/rss_fr.xml"/>
+            <outline type="rss" text="atelier de bricolage littéraire" title="atelier de bricolage littéraire" xmlUrl="http://www.atelierdebricolage.net/?feed=rss2" htmlUrl="https://www.atelierdebricolage.net"/>
+            <outline type="rss" text="The Digital Reader" title="The Digital Reader" xmlUrl="http://www.the-digital-reader.com/feed/" htmlUrl="https://the-digital-reader.com/"/>
+            <outline type="rss" text="Prospective du Livre (Lorenzo Soccavo)" title="Prospective du Livre (Lorenzo Soccavo)" xmlUrl="http://prospectivedulivre.blogspot.com/feeds/posts/default" htmlUrl="https://prospectivedulivre.blogspot.com/"/>
+            <outline type="rss" text="Cavalier des touches (Martin Winckler)" title="Cavalier des touches (Martin Winckler)" xmlUrl="http://wincklersblog.blogspot.com/feeds/posts/default" htmlUrl="http://wincklersblog.blogspot.com/"/>
+            <outline type="rss" text="Les divagations de Ludomire (XML feed) (ludom.cc)" title="Les divagations de Ludomire (XML feed) (ludom.cc)" xmlUrl="http://ludom.cc/index.php/feed/" htmlUrl="http://ludom.cc"/>
+            <outline type="rss" text="Et sinon, vous avez un vrai métier ?" title="Et sinon, vous avez un vrai métier ?" xmlUrl="http://ericwantiez.blogspot.com/feeds/posts/default" htmlUrl="http://ericwantiez.blogspot.com/"/>
+            <outline type="rss" text="Tonton Beorn" title="Tonton Beorn" xmlUrl="http://leblogdetontonbeorn.hautetfort.com/index.rss" htmlUrl="http://leblogdetontonbeorn.hautetfort.com/"/>
+            <outline type="rss" text="mot maquis (Juliette Mezenc)" title="mot maquis (Juliette Mezenc)" xmlUrl="http://www.motmaquis.net/spip.php?page=backend" htmlUrl="http://motmaquis.net/"/>
+            <outline type="rss" text="Benjamin Hoguet" title="Benjamin Hoguet" xmlUrl="http://benhoguet.com/feed/" htmlUrl="https://www.benhoguet.com/"/>
+            <outline type="rss" text="cahiers fantômes" title="cahiers fantômes" xmlUrl="https://cahiersfantomes.com/feed/" htmlUrl="https://cahiersfantomes.com"/>
+            <outline type="rss" text="La Faquinade" title="La Faquinade" xmlUrl="http://lafaquinade.wordpress.com/feed/" htmlUrl="https://lafaquinade.wordpress.com"/>
+            <outline type="rss" text="L'Indé Panda" title="L'Indé Panda" xmlUrl="https://lindepanda.wordpress.com/feed/" htmlUrl="https://lindepanda.wordpress.com"/>
+            <outline type="rss" text="L'Autofictif" title="L'Autofictif" xmlUrl="http://autofictif.blogspot.com/feeds/posts/default" htmlUrl="http://autofictif.blogspot.com/"/>
+            <outline type="rss" text="Déboîtements (Christophe Grossi)" title="Déboîtements (Christophe Grossi)" xmlUrl="http://deboitements.net/spip.php?page=backend" htmlUrl="http://deboitements.net/"/>
+            <outline type="rss" text="Vince's (XML feed) (vincent.jousse.org)" title="Vince's (XML feed) (vincent.jousse.org)" xmlUrl="https://vincent.jousse.org/atom.xml" htmlUrl="http://vincent.jousse.org"/>
+            <outline type="rss" text="le point imaginaire" title="le point imaginaire" xmlUrl="http://christinesimon.fr/spip.php?page=backend" htmlUrl="https://christinesimon.fr/"/>
+            <outline type="rss" text="Le Petit Monde de Nicolas Esse » Flux" title="Le Petit Monde de Nicolas Esse » Flux" xmlUrl="https://nicolasesse.com/feed/" htmlUrl="https://nicolasesse.com"/>
+            <outline type="rss" text="Fut-il ou versa t'il dans la facilité ?" title="Fut-il ou versa t'il dans la facilité ?" xmlUrl="http://fut-il-ou-versa-t-il.blogspot.com/feeds/posts/default" htmlUrl="http://www.fut-il.net/"/>
+            <outline type="rss" text="Stéphane Gantelet" title="Stéphane Gantelet" xmlUrl="http://s.gantelet.over-blog.com/rss" htmlUrl="https://s-gantelet.over-blog.com/"/>
+            <outline type="rss" text="Catherine Loiseau | Autrice, Coach et Formatrice" title="Catherine Loiseau | Autrice, Coach et Formatrice" xmlUrl="http://feeds.feedburner.com/CatherineLoiseau" htmlUrl="https://catherine-loiseau.fr/"/>
+            <outline type="rss" text="Dreamlands" title="Dreamlands" xmlUrl="http://dreamlands-virtual-tour.blogspot.com/feeds/posts/default" htmlUrl="http://dreamlands-virtual-tour.blogspot.com/"/>
+            <outline type="rss" text="Laurent Queyssi" title="Laurent Queyssi" xmlUrl="http://laurentqueyssi.fr/site/feed/" htmlUrl="http://laurentqueyssi.fr/site"/>
+            <outline type="rss" text="Le Parlement des Rêves" title="Le Parlement des Rêves" xmlUrl="http://www.sullivanlepostec.fr/rss" htmlUrl="https://www.sullivanlepostec.fr/"/>
+            <outline type="rss" text="Hypothermia" title="Hypothermia" xmlUrl="http://www.hypothermia.fr/feed/" htmlUrl="https://www.hypothermia.fr"/>
+        </outline>
+        <outline text="NetCulture et Techno" title="NetCulture et Techno">
+            <outline type="rss" text="Study Hacks - Decoding Patterns of Success - Cal Newport (XML feed) (feeds.feedburner.com)" title="Study Hacks - Decoding Patterns of Success - Cal Newport (XML feed) (feeds.feedburner.com)" xmlUrl="http://feeds.feedburner.com/StudyHacks" htmlUrl="https://calnewport.com/blog/"/>
+            <outline type="rss" text="Pluralistic: Daily links from Cory Doctorow (XML feed) (pluralistic.net)" title="Pluralistic: Daily links from Cory Doctorow (XML feed) (pluralistic.net)" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net"/>
+            <outline type="rss" text="zoupic - le propre de l'Om" title="zoupic - le propre de l'Om" xmlUrl="http://www.zoupic.com/feed/" htmlUrl="https://www.zoupic.com/"/>
+            <outline type="rss" text="Grise Bouille" title="Grise Bouille" xmlUrl="https://grisebouille.net/feed.rss" htmlUrl="https://grisebouille.net/"/>
+            <outline type="rss" text="Pablo Pernot (XML feed) (pablopernot.fr)" title="Pablo Pernot (XML feed) (pablopernot.fr)" xmlUrl="https://pablopernot.fr/index.xml" htmlUrl="https://pablopernot.fr/"/>
+            <outline type="rss" text="Solene'%" title="Solene'%" xmlUrl="https://dataswamp.org/~solene/rss.xml" htmlUrl="https://dataswamp.org/~solene/"/>
+            <outline type="rss" text="S.I.Lex" title="S.I.Lex" xmlUrl="http://scinfolex.wordpress.com/feed/" htmlUrl="https://scinfolex.com"/>
+            <outline type="rss" text="ericwatier.info" title="ericwatier.info" xmlUrl="http://www.ericwatier.info/feed/" htmlUrl="https://www.ericwatier.info"/>
+            <outline type="rss" text="Cyroul.com" title="Cyroul.com" xmlUrl="http://www.cyroul.com/feed/" htmlUrl="https://cyroul.com"/>
+            <outline type="rss" text="Restez Curieux !" title="Restez Curieux !" xmlUrl="http://cyrille-borne.com/feed/rss" htmlUrl="https://restez-curieux.ovh"/>
+            <outline type="rss" text="Reflets.info" title="Reflets.info" xmlUrl="http://reflets.info/feed/" htmlUrl="https://reflets.info/"/>
+            <outline type="rss" text="Liseuse Kindle, Kobo, Vivlio &amp; Pocketbook" title="Liseuse Kindle, Kobo, Vivlio &amp; Pocketbook" xmlUrl="http://feeds.feedburner.com/Liseuses" htmlUrl="https://www.liseuses.net"/>
+            <outline type="rss" text="L'image sociale" title="L'image sociale" xmlUrl="http://imagesociale.fr/feed" htmlUrl="http://imagesociale.fr"/>
+            <outline type="rss" text="David Peyron" title="David Peyron" xmlUrl="https://davidpeyron.wordpress.com/feed/" htmlUrl="https://davidpeyron.wordpress.com"/>
+            <outline type="rss" text="davidbosman.fr" title="davidbosman.fr" xmlUrl="http://davidbosman.fr/blog/feed/" htmlUrl="https://www.davidbosman.fr/blog"/>
+            <outline type="rss" text="Philippe Scoffoni – Logiciel libre, open source, numérique – Dolibarr – Nextcloud – WooCommerce" title="Philippe Scoffoni – Logiciel libre, open source, numérique – Dolibarr – Nextcloud – WooCommerce" xmlUrl="http://philippe.scoffoni.net/feed/" htmlUrl="https://philippe.scoffoni.net"/>
+            <outline type="rss" text="Gerard Foucher" title="Gerard Foucher" xmlUrl="http://www.dailymotion.com/rss/user/GerardFoucher75018/1" htmlUrl="https://www.dailymotion.com/no-live/user/GerardFoucher75018/1"/>
+            <outline type="rss" text="Tara Tarakiyee – Techverständiger (XML feed) (tarakiyee.com)" title="Tara Tarakiyee – Techverständiger (XML feed) (tarakiyee.com)" xmlUrl="https://tarakiyee.com/feed/" htmlUrl="https://tarakiyee.com"/>
+            <outline type="rss" text="Pavillon rouge et noir (XML feed) (p4bl0.net)" title="Pavillon rouge et noir (XML feed) (p4bl0.net)" xmlUrl="https://p4bl0.net/feed/rss2" htmlUrl="https://p4bl0.net/"/>
+            <outline type="rss" text="Antonio A. Casilli" title="Antonio A. Casilli" xmlUrl="http://www.bodyspacesociety.eu/feed/" htmlUrl="https://www.bodyspacesociety.eu/"/>
+            <outline type="rss" text="Media Trend" title="Media Trend" xmlUrl="http://www.themediatrend.com/wordpress/?feed=rss2" htmlUrl="http://www.themediatrend.com/wordpress"/>
+            <outline type="rss" text="Le clairon" title="Le clairon" xmlUrl="http://leclairon.fr/rss" htmlUrl="https://leclairon.over-blog.com/"/>
+            <outline type="rss" text="Les-Crises.fr" title="Les-Crises.fr" xmlUrl="http://feeds.feedburner.com/les-crises-fr" htmlUrl="https://www.les-crises.fr"/>
+            <outline type="rss" text="Désert de sel" title="Désert de sel" xmlUrl="http://salebeno.wordpress.com/feed/" htmlUrl="https://salebeno.wordpress.com"/>
+            <outline type="rss" text="Drew DeVault's blog" title="Drew DeVault's blog" xmlUrl="https://drewdevault.com/blog/index.xml" htmlUrl="https://drewdevault.com"/>
+            <outline type="rss" text="Andrew Perfors" title="Andrew Perfors" xmlUrl="https://perfors.net/index.xml" htmlUrl="http://perfors.net/"/>
+            <outline type="rss" text="Standblog" title="Standblog" xmlUrl="https://standblog.org/blog/feed/atom" htmlUrl="https://standblog.org/blog/"/>
+            <outline type="rss" text="Un jour Une idée" title="Un jour Une idée" xmlUrl="http://unjouruneidee.wordpress.com/feed/" htmlUrl="https://unjouruneidee.wordpress.com"/>
+            <outline type="rss" text="Ouvertures immédiates / Immediate openings (XML feed) (bernardrentier.wordpress.com)" title="Ouvertures immédiates / Immediate openings (XML feed) (bernardrentier.wordpress.com)" xmlUrl="https://bernardrentier.wordpress.com/feed/" htmlUrl="https://bernardrentier.wordpress.com"/>
+            <outline type="rss" text="On refait le blog" title="On refait le blog" xmlUrl="http://merome.net/blog/index.php?feed/atom" htmlUrl="https://merome.net/blog/index.php?"/>
+            <outline type="rss" text="Connecting worlds (Raydacteur)" title="Connecting worlds (Raydacteur)" xmlUrl="https://philbancourt.wordpress.com/feed/" htmlUrl="https://philbancourt.wordpress.com"/>
+            <outline type="rss" text="Zéro Seconde (Martin Lessard)" title="Zéro Seconde (Martin Lessard)" xmlUrl="http://feeds.feedburner.com/zeroseconde" htmlUrl="http://www.zeroseconde.com"/>
+            <outline type="rss" text="The Changelog" title="The Changelog" xmlUrl="https://changelog.complete.org/feed" htmlUrl="https://changelog.complete.org"/>
+            <outline type="rss" text="Le Monolecte (Agnès Maillard)" title="Le Monolecte (Agnès Maillard)" xmlUrl="http://blog.monolecte.fr/feed/atom" htmlUrl="https://blog.monolecte.fr"/>
+            <outline type="rss" text="SavoirsCom1" title="SavoirsCom1" xmlUrl="http://feeds.feedburner.com/Savoirscom1" htmlUrl="http://www.savoirscom1.info"/>
+            <outline type="rss" text="Le dernier blog" title="Le dernier blog" xmlUrl="http://www.hyperbate.com/dernier/?feed=rss2" htmlUrl="https://hyperbate.fr/dernier"/>
+            <outline type="rss" text="Navire" title="Navire" xmlUrl="http://navire.net/feed/atom" htmlUrl="https://navire.net/"/>
+        </outline>
+        <outline text="Photo" title="Photo">
+            <outline type="rss" text="La boite verte" title="La boite verte" xmlUrl="http://www.laboiteverte.fr/feed/" htmlUrl="https://www.laboiteverte.fr"/>
+            <outline type="rss" text="photoetmac.com" title="photoetmac.com" xmlUrl="http://www.macandphoto.com/atom.xml" htmlUrl="https://photoetmac.com/"/>
+        </outline>
+        <outline text="Vélo" title="Vélo">
+            <outline type="rss" text="Un Monde à Vélo » Flux" title="Un Monde à Vélo » Flux" xmlUrl="https://un-monde-a-velo.com/feed/" htmlUrl="https://un-monde-a-velo.com"/>
+            <outline type="rss" text="Valvert on the road, velo rando 🌐🚲♿" title="Valvert on the road, velo rando 🌐🚲♿" xmlUrl="https://valvertontheroad.wordpress.com/feed/" htmlUrl="https://valvertontheroad.wordpress.com"/>
+            <outline type="rss" text="Lanterne Rouge" title="Lanterne Rouge" xmlUrl="https://lanternerouge.com.au/feed/" htmlUrl="https://lanternerouge.com/"/>
+            <outline type="rss" text="bikepacker.fr » Flux" title="bikepacker.fr » Flux" xmlUrl="http://bikepacker.fr/feed" htmlUrl="https://bikepacker.fr/"/>
+            <outline type="rss" text="Joakim Faiss" title="Joakim Faiss" xmlUrl="https://joakim.faiss.com/feed/" htmlUrl="https://joakim.faiss.com"/>
+            <outline type="rss" text="BIKEPACKING.com" title="BIKEPACKING.com" xmlUrl="http://www.pedalingnowhere.com/feed/" htmlUrl="https://bikepacking.com/"/>
+            <outline type="rss" text="Lost On A Bike" title="Lost On A Bike" xmlUrl="http://www.lostonabike.com/feed/" htmlUrl="http://www.lostonabike.com"/>
+            <outline type="rss" text="Bikerumor" title="Bikerumor" xmlUrl="http://www.bikerumor.com/feed/" htmlUrl="https://bikerumor.com/"/>
+            <outline type="rss" text="Journal - Bike Wanderer" title="Journal - Bike Wanderer" xmlUrl="http://www.bikewanderer.com/on-the-road?format=RSS" htmlUrl="https://www.bikewanderer.com/on-the-road/"/>
+            <outline type="rss" text="Darwin Onthetrail" title="Darwin Onthetrail" xmlUrl="https://darwinonthetrail.com/feed/" htmlUrl="https://darwinonthetrail.com"/>
+            <outline type="rss" text="D+" title="D+" xmlUrl="https://denisbraux.wordpress.com/feed/" htmlUrl="https://denisbraux.wordpress.com"/>
+            <outline type="rss" text="The Radavist" title="The Radavist" xmlUrl="http://prollyisnotprobably.com/atom.xml" htmlUrl="https://theradavist.com"/>
+            <outline type="rss" text="Big Wheel Building" title="Big Wheel Building" xmlUrl="http://lacemine29.blogspot.com/feeds/posts/default" htmlUrl="http://lacemine29.blogspot.com/"/>
+            <outline type="rss" text="CYCLINGABOUT.com" title="CYCLINGABOUT.com" xmlUrl="http://www.cyclingabout.com/feed/" htmlUrl="https://www.cyclingabout.com/"/>
+            <outline type="rss" text="Singletrack World Magazine" title="Singletrack World Magazine" xmlUrl="http://www.singletrackworld.com/feed/" htmlUrl="https://singletrackworld.com"/>
+            <outline type="rss" text="Tom’s Bike Trip" title="Tom’s Bike Trip" xmlUrl="http://tomsbiketrip.com/feed/" htmlUrl="https://tomsbiketrip.com/"/>
+            <outline type="rss" text="Vojo" title="Vojo" xmlUrl="http://www.vojomag.com/feed/" htmlUrl="https://www.vojomag.com/"/>
+            <outline type="rss" text="One of Seven Project » Feed" title="One of Seven Project » Feed" xmlUrl="https://oneofsevenproject.com/feed/" htmlUrl="https://oneofsevenproject.com/"/>
+            <outline type="rss" text="Ad Voyages » Flux" title="Ad Voyages » Flux" xmlUrl="https://www.ad-photos.fr/feed/" htmlUrl="https://www.ad-photos.fr"/>
+        </outline>
+        <outline text="Amis (on interagit)" title="Amis (on interagit)">
+            <outline type="rss" text="arnaud maïsetti" title="arnaud maïsetti" xmlUrl="http://www.arnaudmaisetti.net/spip/spip.php?page=backend" htmlUrl="https://www.arnaudmaisetti.net/spip/"/>
+            <outline type="rss" text="ploum.net (Lionel Dricot)" title="ploum.net (Lionel Dricot)" xmlUrl="http://ploum.net/feed/atom" htmlUrl="https://ploum.net/"/>
+            <outline type="rss" text="Françoise Renaud, écritures" title="Françoise Renaud, écritures" xmlUrl="https://www.francoiserenaud.com/feed/" htmlUrl="https://www.francoiserenaud.com"/>
+            <outline type="rss" text="Mais où va le Web" title="Mais où va le Web" xmlUrl="http://maisouvaleweb.fr/feed/" htmlUrl="https://maisouvaleweb.fr"/>
+            <outline type="rss" text="Graphisme et interactivité" title="Graphisme et interactivité" xmlUrl="http://feeds.feedburner.com/geoffreydorne" htmlUrl="https://graphism.fr"/>
+            <outline type="rss" text="Carnets de La Grange" title="Carnets de La Grange" xmlUrl="http://www.la-grange.net/feed.atom" htmlUrl="https://www.la-grange.net/"/>
+            <outline type="rss" text="Alias (erdorin.org)" title="Alias (erdorin.org)" xmlUrl="https://erdorin.org/feed/" htmlUrl="https://erdorin.org/"/>
+            <outline type="rss" text="Louis Derrac" title="Louis Derrac" xmlUrl="https://louisderrac.com/feed/" htmlUrl="https://louisderrac.com"/>
+            <outline type="rss" text="le tiers livre, web &amp; littérature" title="le tiers livre, web &amp; littérature" xmlUrl="http://www.tierslivre.net/spip/spip.php?page=backend" htmlUrl="https://www.tierslivre.net/spip-443/"/>
+            <outline type="rss" text="L'Antre du Greg" title="L'Antre du Greg" xmlUrl="http://www.antredugreg.be/feed/" htmlUrl="https://www.antredugreg.be"/>
+            <outline type="rss" text="Après l'abondance (Seb Musset)" title="Après l'abondance (Seb Musset)" xmlUrl="http://sebmusset.blogspot.com/feeds/posts/default" htmlUrl="http://sebmusset.blogspot.com/"/>
+            <outline type="rss" text="Fuir est une pulsion" title="Fuir est une pulsion" xmlUrl="http://www.fuirestunepulsion.net/spip.php?page=backend" htmlUrl="https://www.fuirestunepulsion.net/"/>
+            <outline type="rss" text="JCFrogBlog4" title="JCFrogBlog4" xmlUrl="http://jcfrog.com/blog/feed/" htmlUrl="http://jcfrog.com/blog"/>
+            <outline type="rss" text="affordance.info" title="affordance.info" xmlUrl="http://www.affordance.info/mon_weblog/atom.xml" htmlUrl="https://affordance.framasoft.org"/>
+            <outline type="rss" text="Les heures creuses" title="Les heures creuses" xmlUrl="https://lesheurescreuses.net/feed/" htmlUrl="https://lesheurescreuses.net"/>
+            <outline type="rss" text="Carnet de notes" title="Carnet de notes" xmlUrl="http://n.survol.fr/feed" htmlUrl="https://n.survol.fr"/>
+            <outline type="rss" text="Grignotages" title="Grignotages" xmlUrl="https://grignotages.com/feed/" htmlUrl="https://grignotages.com"/>
+            <outline type="rss" text="Climb to the Stars" title="Climb to the Stars" xmlUrl="http://climbtothestars.org/feed/" htmlUrl="https://climbtothestars.org"/>
+            <outline type="rss" text="Liminaire" title="Liminaire" xmlUrl="http://liminaire.fr/spip.php?page=backend" htmlUrl="https://liminaire.fr/"/>
+            <outline type="rss" text="L’atelier permanent (Philippe Castelneau)" title="L’atelier permanent (Philippe Castelneau)" xmlUrl="http://philippe-castelneau.com/feed/" htmlUrl="https://philippe-castelneau.com"/>
+            <outline type="rss" text="MatooBlog" title="MatooBlog" xmlUrl="http://blog.matoo.net/index.php/feed/" htmlUrl="https://matoo.net"/>
+            <outline type="rss" text="Les connexions au Vivant" title="Les connexions au Vivant" xmlUrl="https://sidoineb.substack.com/feed" htmlUrl="https://sidoineb.substack.com"/>
+            <outline type="rss" text="Psy et Geek ;-)" title="Psy et Geek ;-)" xmlUrl="http://www.psyetgeek.com/feed" htmlUrl="https://psyetgeek.com"/>
+            <outline type="rss" text="Denis Salem | Blog" title="Denis Salem | Blog" xmlUrl="https://denissalem.ovh/Blog/atom-feed.xml" htmlUrl="https://denissalem.ovh/Blog/"/>
+            <outline type="rss" text="L'Electron livre" title="L'Electron livre" xmlUrl="https://davidcamus.substack.com/feed" htmlUrl="https://davidcamus.substack.com"/>
+        </outline>
+        <outline text="SF" title="SF">
+            <outline type="rss" text="Lionel Davoust" title="Lionel Davoust" xmlUrl="http://lioneldavoust.com/feed/" htmlUrl="https://lioneldavoust.com"/>
+            <outline type="rss" text="Blog de Thomas Geha / Xavier Dollo" title="Blog de Thomas Geha / Xavier Dollo" xmlUrl="http://gehathomas.wordpress.com/feed/" htmlUrl="https://gehathomas.wordpress.com"/>
+        </outline>
+    </body>
+</opml>

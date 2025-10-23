@@ -3,18 +3,24 @@ import feedparser
 from datetime import datetime, timedelta
 import ssl
 import os
+from pathlib import Path
 import pickle
 import json
 from bs4 import BeautifulSoup
 import requests
 from email.utils import parsedate_to_datetime  # pour parser dates RFC 2822 (RSS)
-
-
 import logging
-from logging.handlers import RotatingFileHandler
 
-# Log minimal dans un fichier unique, sans rotation ni console
-LOG_FILE = "app.log"
+DATA_DIR = Path("./data")
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+DATA_OUTPUT = Path("./output")
+DATA_OUTPUT.mkdir(parents=True, exist_ok=True)
+
+LOG_FILE = f"{DATA_OUTPUT}/_app.log"
+
+CACHE_FILE = './_rss_cache.pkl'
+
 
 # Vider le log au démarrage
 open(LOG_FILE, "w", encoding="utf-8").close()
@@ -43,9 +49,6 @@ DEFAULT_HEADERS = {
 
 # Ignore SSL certificate verification
 ssl._create_default_https_context = ssl._create_unverified_context
-
-# Path to the cache file
-CACHE_FILE = '_rss_cache.pkl'
 
 
 # Load cache from disk
@@ -333,6 +336,41 @@ def opml_to_markdown(opml_file_path, markdown_file_path):
     write_markdown(categories, markdown_file_path)
 
 
+# Convert gmi text links to OPML
+def gmi_to_opml(input_file, output_file):
+    """Convert a text file with RSS feeds to OPML format."""
+    with open(input_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    opml_content = ['<?xml version="1.0" encoding="UTF-8"?>', '<opml version="1.0">', '<head>', '<title>RSS Feeds</title>', '</head>', '<body>']
+
+    current_category = None
+
+    for line in lines:
+        line = line.strip()
+        if line.startswith('##'):
+            # New category
+            current_category = line[2:].strip()
+            opml_content.append(f'<outline text="{current_category}" title="{current_category}">')
+        elif line.startswith('=>'):
+            # New feed
+            parts = line.split(' ', 2)
+            if len(parts) >= 2:
+                url = parts[1].strip()
+                title = parts[2].strip() if len(parts) > 2 else url
+                opml_content.append(f'<outline type="rss" text="{title}" title="{title}" xmlUrl="{url}" htmlUrl="{url}"/>')
+
+    # Close the last category
+    if current_category:
+        opml_content.append('</outline>')
+
+    opml_content.append('</body>')
+    opml_content.append('</opml>')
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(opml_content))
+
+
 if __name__ == "__main__":
 
     # Initialize cache
@@ -363,21 +401,6 @@ if __name__ == "__main__":
             print("Stats (seconds avg interval):", s)
         exit()
 
-
-    # print( get_rss_url_from_website("https://www.themarginalian.org/") )
-
-    # feed = fetch_and_cache_feed('http://feedproxy.google.com/brainpickings/rss',"https://www.themarginalian.org/")
-    # feed = fetch_and_cache_feed('http://www.creationmonetaire.info/feed',"http://www.creationmonetaire.info")
-
-
-    # feed = fetch_and_cache_feed('http://philippe-castelneau.com/feed/')
-    # feed = fetch_and_cache_feed('https://www.tierslivre.net/spip/','https://www.tierslivre.net/')
-
-    # feed = fetch_and_cache_feed('http://ploum.net/feed/atom',"http://ploum.net")
-    # print(feed)
-    # exit()
-
-
-    opml_file_path = 'feedly.opml'
-    markdown_file_path = 'output.md'
+    opml_file_path = f'{DATA_DIR}/feedly.opml'
+    markdown_file_path = f'{DATA_OUTPUT}/output.md'
     opml_to_markdown(opml_file_path, markdown_file_path)
