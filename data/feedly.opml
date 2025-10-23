@@ -145,7 +145,7 @@
             <outline type="rss" text="One of Seven Project » Feed" title="One of Seven Project » Feed" xmlUrl="https://oneofsevenproject.com/feed/" htmlUrl="https://oneofsevenproject.com/"/>
             <outline type="rss" text="Ad Voyages » Flux" title="Ad Voyages » Flux" xmlUrl="https://www.ad-photos.fr/feed/" htmlUrl="https://www.ad-photos.fr"/>
         </outline>
-        <outline text="Amis (on interagit)" title="Amis (on interagit)">
+        <outline text="Amis" title="Amis">
             <outline type="rss" text="arnaud maïsetti" title="arnaud maïsetti" xmlUrl="http://www.arnaudmaisetti.net/spip/spip.php?page=backend" htmlUrl="https://www.arnaudmaisetti.net/spip/"/>
             <outline type="rss" text="ploum.net (Lionel Dricot)" title="ploum.net (Lionel Dricot)" xmlUrl="http://ploum.net/feed/atom" htmlUrl="https://ploum.net/"/>
             <outline type="rss" text="Françoise Renaud, écritures" title="Françoise Renaud, écritures" xmlUrl="https://www.francoiserenaud.com/feed/" htmlUrl="https://www.francoiserenaud.com"/>

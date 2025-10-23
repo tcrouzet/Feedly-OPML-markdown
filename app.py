@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 import requests
 from email.utils import parsedate_to_datetime  # pour parser dates RFC 2822 (RSS)
 import logging
+from urllib.parse import urljoin
 
 DATA_DIR = Path("./data")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -20,6 +21,14 @@ DATA_OUTPUT.mkdir(parents=True, exist_ok=True)
 LOG_FILE = f"{DATA_OUTPUT}/_app.log"
 
 CACHE_FILE = './_rss_cache.pkl'
+
+CANDIDATE_FEEDS = [
+    "/feed/",
+    "/atom.xml",
+    "/rss.xml",
+]
+
+USING_CACHE = False
 
 
 # Vider le log au démarrage
@@ -58,12 +67,25 @@ def load_cache():
             return pickle.load(f)
     except (FileNotFoundError, EOFError):
         return {}
-    
+
 # Save cache to disk
 def save_cache(cache):
-    with open(CACHE_FILE, 'wb') as f:
-        pickle.dump(cache, f)
+    if USING_CACHE:
+        with open(CACHE_FILE, 'wb') as f:
+            pickle.dump(cache, f)
 
+def get_cache(entry):
+    if USING_CACHE and entry in rss_cache:
+        cached_time, cached_item = rss_cache[entry]
+        if datetime.now() - cached_time < timedelta(days=1):
+            logger.debug(f"Using cached for {entry}: {cached_item}")
+            return cached_item
+    return None
+
+def in_cache(entry, value):
+    if USING_CACHE and entry in rss_cache:
+        rss_cache[entry] = (datetime.now(), value)
+        save_cache(rss_cache)
 
 def extract_entry_datetime(entry):
     # 1) Priorité aux champs parsés par feedparser
@@ -84,14 +106,30 @@ def extract_entry_datetime(entry):
             pass
     return None
 
+
+def try_candidate_feeds(base_url: str) -> str | None:
+    for path in CANDIDATE_FEEDS:
+        url = urljoin(base_url, path)
+        try:
+            resp = session.get(
+                url,
+                headers=DEFAULT_HEADERS,
+                timeout=DEFAULT_TIMEOUT,
+                allow_redirects=True,
+            )
+            # Attention à la priorité des "and/or"
+            if resp.status_code == 200 and (b"<rss" in resp.content or b"<feed" in resp.content):
+                logger.info(f"Candidate feed OK: {url}")
+                return resp.url  # URL finale après redirection
+        except Exception as e:
+            logger.debug(f"Candidate fail {url}: {e}")
+    return None
+
 def get_rss_url_from_website(website_url):
-    
-    # Check if the URL is in the cache and if it's still valid
-    if website_url in rss_cache:
-        cached_time, cached_rss_url = rss_cache[website_url]
-        if datetime.now() - cached_time < timedelta(days=7):
-            logger.info(f"Cached RSS URL: {cached_rss_url}")
-            return cached_rss_url
+
+    cached_rss_url = get_cache(website_url)
+    if cached_rss_url:
+        return cached_rss_url
 
     try:
         logger.info(f"GET {website_url}")
@@ -99,31 +137,44 @@ def get_rss_url_from_website(website_url):
             website_url,
             headers=DEFAULT_HEADERS,
             timeout=DEFAULT_TIMEOUT,
+            allow_redirects=True,
         )
         response.raise_for_status()
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        soup = BeautifulSoup(response.content, "html.parser")
 
-        # Find the RSS link
-        rss_link = soup.find('link', type='application/rss+xml')
-        if rss_link and rss_link.get('href'):
+        # 2) D’abord chercher via balise <link> standard
+        rss_link = soup.find("link", type="application/rss+xml")
+        atom_link = soup.find("link", type="application/atom+xml")
 
-            # Cache the RSS URL
-            rss_cache[website_url] = (datetime.now(), rss_link['href'])
-            save_cache(rss_cache)
+        found = None
+        if rss_link and rss_link.get("href"):
+            found = urljoin(website_url, rss_link["href"])
+        elif atom_link and atom_link.get("href"):
+            found = urljoin(website_url, atom_link["href"])
 
-            return rss_link['href']
+        # 3) Si pas trouvé, essayer les candidates
+        if not found:
+            found = try_candidate_feeds(website_url)
+
+        if found:
+            in_cache(website_url, found)
+            logger.info(f"Found RSS/Atom for {website_url}: {found}")
+            return found
         else:
-            logger.info("No RSS link found on the page.")
+            logger.warning(f"No RSS/Atom link found on {website_url}")
             return None
-    except requests.RequestException as e:
-        logger.info(f"Error fetching the website: {e}")
-        return None
 
+    except requests.Timeout:
+        logger.warning(f"Timeout fetching website {website_url}")
+        return None
+    except requests.RequestException as e:
+        logger.error(f"Error fetching website {website_url}: {e}")
+        return None    
 
 def fetch_feed(rss_url):
     try:
-        logger.info(f"GET {rss_url}")
+        logger.info(f"fetch_feed {rss_url}")
         headers = DEFAULT_HEADERS 
         response = session.get(
             rss_url,
@@ -137,30 +188,44 @@ def fetch_feed(rss_url):
             return {"bozo": 1, "http_status": response.status_code, "entries": []}
 
         logger.info(f"Reditect URL: {response.url}")
-
         # Parse the final URL content with feedparser
         feed = feedparser.parse(response.content)
-        return feed
+
+        if feed:
+            bozo = getattr(feed, 'bozo', None) if hasattr(feed, 'bozo') else feed.get('bozo', 0)
+            entries = getattr(feed, 'entries', None) if hasattr(feed, 'entries') else feed.get('entries', [])
+            http_status = feed.get('http_status') if isinstance(feed, dict) else None
+            logger.info(f"bozo {bozo} http_status {http_status}")
+            return bozo, entries, http_status
+
+        return None
 
     except requests.Timeout:
         logger.warning(f"Timeout fetching the feed {rss_url}")
-        return {"bozo": 1}
+        return None
        
     except requests.RequestException as e:
         logger.error(f"Error fetching the feed: {e}")
-        return {"bozo": 1}
+        return None
 
 
-def fetch_and_cache_feed(rss_url, web_url=None, cache_flag=True):
-    feed = fetch_feed(rss_url)
+def fetch_and_cache_feed(rss_url, web_url=None, mode=1):
+    logger.info(f"fetch try 1 {rss_url}")
+    bozo, entries, http_status = fetch_feed(rss_url)
 
-    # Extraire bozo/entries/status de manière robuste
-    bozo = getattr(feed, 'bozo', None) if hasattr(feed, 'bozo') else feed.get('bozo', 0)
-    entries = getattr(feed, 'entries', None) if hasattr(feed, 'entries') else feed.get('entries', [])
-    http_status = feed.get('http_status') if isinstance(feed, dict) else None
+    if not bozo and mode == 1:
+        logger.warning(f"Feed error for {rss_url}")
+        new_rss = get_rss_url_from_website(web_url)
+        logger.info(f"New RSS URL from website {web_url}: {new_rss}")
+        if new_rss and new_rss != rss_url:
+            # Mettre à jour le cache de découverte (déjà fait dans get_rss_url_from_website)
+            return fetch_and_cache_feed(new_rss, None, mode=2)  # relancer sur le nouveau flux
+
+    exit()
+
 
     # Cas d'erreur: HTTP 404/410/403/... ou bozo sans entries
-    if (http_status and http_status >= 400) or (bozo and not entries):
+    if (http_status and http_status >= 400) or (bozo and not entries) or not bozo:
         logger.warning(f"Feed error for {rss_url} (status={http_status})")
         # Tenter de retrouver un flux depuis le site si web_url dispo
         if web_url:
@@ -168,7 +233,7 @@ def fetch_and_cache_feed(rss_url, web_url=None, cache_flag=True):
             logger.info(f"New RSS URL from website {web_url}: {new_rss}")
             if new_rss and new_rss != rss_url:
                 # Mettre à jour le cache de découverte (déjà fait dans get_rss_url_from_website)
-                return fetch_and_cache_feed(new_rss, None, cache_flag)  # relancer sur le nouveau flux
+                return fetch_and_cache_feed(new_rss, None)  # relancer sur le nouveau flux
 
         # Échec final: stocker une marque d'échec pour éviter retry incessant
         failure_payload = json.dumps({
@@ -176,9 +241,7 @@ def fetch_and_cache_feed(rss_url, web_url=None, cache_flag=True):
             "status": http_status or 0,
             "entries": []
         })
-        rss_cache[rss_url] = (datetime.now(), failure_payload)
-        if cache_flag:
-            save_cache(rss_cache)
+        in_cache( rss_url, failure_payload)
         return {"entries": []}
 
     # Cas OK: normaliser et cacher
@@ -196,9 +259,7 @@ def fetch_and_cache_feed(rss_url, web_url=None, cache_flag=True):
         ]
     }
     feed_json = json.dumps(feed_data)
-    if cache_flag:
-        rss_cache[rss_url] = (datetime.now(), feed_json)
-        save_cache(rss_cache)
+    in_cache(rss_url, feed_json)
     return feed_data
 
 
@@ -209,23 +270,39 @@ def read_opml(file_path):
 
 
 def sort_rss(categories):
-    """Sort the feeds in each category by update frequency, with active sites first."""
+    """Sort the feeds in each category by update frequency, with active sites first.
+       En cas d'égalité, tri alphabétique par titre.
+    """
     for category_title, feeds in categories.items():
         categories[category_title] = sorted(
             feeds,
-            key=lambda feed: (feed[2] == -1 or feed[2] == 0, feed[2] if isinstance(feed[2], (int, float)) else float('inf'))
+            key=lambda feed: (
+                feed[2] == -1 or feed[2] == 0,                  # sites morts/aucun update en dernier
+                feed[2] if isinstance(feed[2], (int, float)) else float('inf'),
+                feed[0].casefold()                               # titre pour départager
+            )
         )
-
 
 def write_markdown(categories, file_path):
     """Write the categories and feeds to a Markdown file."""
+    # Calculer le total de sites
+    total_sites = sum(len(feeds) for feeds in categories.values())
+    # Date du jour en JJ/MM/AAAA
+    today_str = datetime.now().strftime("%d/%m/%Y")
+
     with open(file_path, 'w', encoding='utf-8') as md_file:
-        for category_title, feeds in categories.items():
+
+        md_file.write(
+            f"Les {total_sites} sites suivis sur [Feedly](https://feedly.com/) au {today_str} "
+            f"(liste mise en forme avec [Feedly-OPML-markdown](https://github.com/tcrouzet/Feedly-OPML-markdown))\n\n"
+        )
+
+        for category_title in sorted(categories.keys(), key=str.casefold):
+            feeds = categories[category_title]
             md_file.write(f"### {category_title}\n\n")
-            for title, html_url, stats in feeds:  # Ignore the stats part
+            for title, html_url, stats in feeds:
                 md_file.write(f"- [{title}]({html_url}) {format_stats(stats)}\n")
             md_file.write("\n")
-
 
 def parse_opml_to_categories(root):
     """Parse the OPML root element into a dictionary of categories."""
@@ -250,26 +327,23 @@ def parse_opml_to_categories(root):
     return categories
 
 
-def feed_parser(rss_url, html_url, cache_flag=True):
+def feed_parser(rss_url, html_url):
     """Parse the RSS feed and return the feed object."""
 
     logger.info(f"Parsing feed {rss_url}, {html_url}")
 
     try:
         # Check if the URL is in the cache and if it's still valid
-        if cache_flag and rss_url in rss_cache:
-            cached_time, cached_feed_json = rss_cache[rss_url]
-            if datetime.now() - cached_time < timedelta(hours=24):
-                # Use cached feed
-                feed = json.loads(cached_feed_json)
-                logger.info(f"Using cached feed for {rss_url}")
-            else:
-                # Fetch new feed
-                feed = fetch_and_cache_feed(rss_url, html_url)
+
+        cached_feed_json = get_cache(rss_url)
+        if cached_feed_json:
+            # Use cached feed
+            feed = json.loads(cached_feed_json)
+            logger.info(f"Using cached feed for {rss_url}")
         else:
             # Fetch new feed
             logger.info(f"Fetching new feed {rss_url}")
-            feed = fetch_and_cache_feed(rss_url, html_url, cache_flag)
+            feed = fetch_and_cache_feed(rss_url, html_url)
 
         return feed
 
@@ -376,13 +450,17 @@ if __name__ == "__main__":
     # Initialize cache
     rss_cache = load_cache()
 
-    if False:
+    if True:
 
-        TEST_RSS = "http://wincklersblog.blogspot.com/feeds/posts/default"
-        TEST_HTML = "http://wincklersblog.blogspot.com"
+        TEST_RSS = "http://prollyisnotprobably.com/atom.xml"
+        TEST_HTML = "https://theradavist.com"
 
-        logger.info("=== TEST CASTELNEAU ===")
-        feed = feed_parser(TEST_RSS, TEST_HTML, cache_flag=False)
+        logger.info("=== TEST ===")
+
+        # print(get_rss_url_from_website(TEST_HTML))
+        # exit()
+
+        feed = feed_parser(TEST_RSS, TEST_HTML)
         if not feed:
             print("Feed None")
         else:
