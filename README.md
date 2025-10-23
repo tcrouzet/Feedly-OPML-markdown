@@ -1,17 +1,11 @@
 # Feedly-OPML-markdown
 
 Convertir un OPML exporté depuis un newsreader comme Feedly en un fichier markdown.
-Classe les feed selon les catégories Feedly, elles-mêmes classées par ordre alphabétique.
+Classe les feeds selon les catégories Feedly, elles-mêmes classées par ordre alphabétique.
 Évalue pour chacun des feeds sa fréquence de mise à jour.
 Filtre les feeds morts.
 
-## Télécharger OPML Feddly dans ./data
-
-https://feedly.com/i/opml
-
-remplacer le ./data/feedly.opml existant
-
-## Local install du script python on a Mac
+## Local install on a Mac/linux
 
 ### 1. Fork project
 
@@ -29,6 +23,12 @@ source venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt --upgrade
 ```
+
+### 3. Télécharger OPML Feddly dans ./data
+
+https://feedly.com/i/opml
+
+remplacer le ./data/feedly.opml existant
 
 ### 2. Exécution
 

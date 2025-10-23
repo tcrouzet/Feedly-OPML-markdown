@@ -16,7 +16,6 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [Après l'abondance (Seb Musset)](http://sebmusset.blogspot.com/) 4 fois par mois
 - [Grignotages](https://grignotages.com) 3 fois par mois
 - [Les connexions au Vivant](https://sidoineb.substack.com) 2 fois par mois
-- [Graphisme et interactivité](https://graphism.fr) 2 fois par mois
 - [Louis Derrac](https://louisderrac.com) 2 fois par mois
 - [Mais où va le Web](https://maisouvaleweb.fr) 2 fois par mois
 - [affordance.info](https://affordance.framasoft.org) 2 fois par mois
@@ -27,6 +26,7 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [L'Antre du Greg](https://www.antredugreg.be) 2 fois par an
 - [JCFrogBlog4](http://jcfrog.com/blog) 2 fois par an
 - [Denis Salem | Blog](https://denissalem.ovh/Blog/) 9 fois par décennie
+- [Graphisme et interactivité](https://graphism.fr) Pas d'actualisation
 
 ### NetCulture et Techno
 
@@ -40,6 +40,7 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [Restez Curieux !](https://restez-curieux.ovh) 1 fois par semaine
 - [Gerard Foucher](https://www.dailymotion.com/no-live/user/GerardFoucher75018/1) 1 fois par semaine
 - [Study Hacks - Decoding Patterns of Success - Cal Newport (XML feed) (feeds.feedburner.com)](https://calnewport.com/blog/) 4 fois par mois
+- [Le clairon](https://leclairon.over-blog.com/) 3 fois par mois
 - [Navire](https://navire.net/) 3 fois par mois
 - [S.I.Lex](https://scinfolex.com) 3 fois par mois
 - [Drew DeVault's blog](https://drewdevault.com) 3 fois par mois
@@ -63,10 +64,9 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [Philippe Scoffoni – Logiciel libre, open source, numérique – Dolibarr – Nextcloud – WooCommerce](https://philippe.scoffoni.net) 2 fois par an
 - [Le Monolecte (Agnès Maillard)](https://blog.monolecte.fr) 2 fois par an
 - [Connecting worlds (Raydacteur)](https://philbancourt.wordpress.com) 2 fois par an
+- [Media Trend](http://www.themediatrend.com/wordpress) 1 fois par an
 - [Un jour Une idée](https://unjouruneidee.wordpress.com) 1 fois par an
 - [Antonio A. Casilli](https://www.bodyspacesociety.eu/) Pas d'actualisation
-- [Le clairon](https://leclairon.over-blog.com/) Pas d'actualisation
-- [Media Trend](http://www.themediatrend.com/wordpress) Pas d'actualisation
 
 ### NetLittérature
 
@@ -75,8 +75,8 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [IDboox](https://www.idboox.com/) 4 fois par jour
 - [Good E-Reader](https://goodereader.com/blog) 2 fois par jour
 - [les choses dites](https://leschosesdites.wordpress.com) 1 fois par jour
+- [cahiers fantômes](https://cahiersfantomes.com) 1 fois par jour
 - [L'Autofictif](http://autofictif.blogspot.com/) 7 fois par semaine
-- [cahiers fantômes](https://cahiersfantomes.com) 7 fois par semaine
 - [Henri Loevenbruck (XML feed) (loevenbruck.org)](https://loevenbruck.org) 6 fois par semaine
 - [Dreamlands](http://dreamlands-virtual-tour.blogspot.com/) 5 fois par semaine
 - [Les ateliers du déluge](https://les-ateliers-du-deluge.com) 4 fois par semaine
@@ -156,7 +156,8 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 
 ### Vélo
 
-- [Bikerumor](https://bikerumor.com/) 4 fois par jour
+- [The Radavist](https://theradavist.com) 6 fois par jour
+- [Bikerumor](https://bikerumor.com/) 5 fois par jour
 - [Vojo](https://www.vojomag.com/) 1 fois par jour
 - [Singletrack World Magazine](https://singletrackworld.com) 6 fois par semaine
 - [Joakim Faiss](https://joakim.faiss.com) 2 fois par semaine
@@ -174,5 +175,4 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [Ad Voyages » Flux](https://www.ad-photos.fr) 4 fois par an
 - [BIKEPACKING.com](https://bikepacking.com/) Pas d'actualisation
 - [Darwin Onthetrail](https://darwinonthetrail.com) Pas d'actualisation
-- [The Radavist](https://theradavist.com) Pas d'actualisation
 
