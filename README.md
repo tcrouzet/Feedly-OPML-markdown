@@ -24,13 +24,13 @@ pip install --upgrade pip
 pip install -r requirements.txt --upgrade
 ```
 
-### 3. Télécharger OPML Feddly dans ./data
+### 2. Télécharger OPML Feddly dans ./data
 
 https://feedly.com/i/opml
 
 remplacer le ./data/feedly.opml existant
 
-### 2. Exécution
+### 3. Exécution
 
 ```bash
 python ./app.py
