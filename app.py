@@ -458,7 +458,8 @@ if __name__ == "__main__":
         logger.info("=== TEST ===")
 
         # print(get_rss_url_from_website(TEST_HTML))
-        # exit()
+        print(fetch_feed("https://cms.theradavist.com/feed"))
+        exit()
 
         feed = feed_parser(TEST_RSS, TEST_HTML)
         if not feed:
