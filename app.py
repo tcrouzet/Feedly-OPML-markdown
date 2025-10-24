@@ -316,6 +316,50 @@ def parse_opml_to_categories(root):
     return categories
 
 
+def get_feed_info(outline):
+    xml_url = outline.get('xmlUrl')
+    title = outline.get('title')
+    html_url = outline.get('htmlUrl')
+    # S'il a des enfants <outline>, c'est un conteneur (catégorie) → on ignore ici
+    if xml_url and title and html_url:
+        logger.info(f"Processing RSS feed: {xml_url}")
+        stats = rss_stats(xml_url, html_url)
+        logger.info(f"Stats: {stats}")
+    return None
+
+def parse_opml_to_categories(root):
+    """Parse the OPML root element into a dictionary of categories.
+       Les flux sans catégorie explicite vont dans 'unknown'."""
+    categories = {}
+
+    # 1) Parcours des catégories existantes (inchangé)
+    for category in root.findall('.//outline[@text]'):
+        category_title = category.get('title')
+        logger.info(category_title)
+
+        feeds = []
+        for outline in category.findall('outline'):
+            feed_info = get_feed_info(outline)
+            if feed_info:
+                feeds.append(feed_info)
+        
+        if category_title and feeds:
+            categories[category_title] = feeds
+
+    # 2) Flux “orphelins” directement sous <body> → catégorie 'unknown'
+    body = root.find('body')
+    if body is not None:
+        unknown = []
+        for outline in body.findall('outline'):
+            feed_info = get_feed_info(outline)
+            if feed_info:
+                unknown.append(feed_info)
+        if unknown:
+            categories["unknown"] = unknown
+
+    return categories
+
+
 def feed_parser(rss_url, html_url):
     """Parse the RSS feed and return the feed object."""
 
