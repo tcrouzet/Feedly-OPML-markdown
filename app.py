@@ -325,6 +325,7 @@ def get_feed_info(outline):
         logger.info(f"Processing RSS feed: {xml_url}")
         stats = rss_stats(xml_url, html_url)
         logger.info(f"Stats: {stats}")
+        return (title, html_url, stats)
     return None
 
 def parse_opml_to_categories(root):

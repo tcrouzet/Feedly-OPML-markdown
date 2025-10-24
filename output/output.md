@@ -1,13 +1,13 @@
-Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise en forme avec [Feedly-OPML-markdown](https://github.com/tcrouzet/Feedly-OPML-markdown))
+Les 158 sites suivis sur [Feedly](https://feedly.com/) au 24/10/2025 (liste mise en forme avec [Feedly-OPML-markdown](https://github.com/tcrouzet/Feedly-OPML-markdown)).
 
 ### Amis
 
 - [L’atelier permanent (Philippe Castelneau)](https://philippe-castelneau.com) Un seul article dans le feed
 - [MatooBlog](https://matoo.net) 1 fois par jour
-- [Fuir est une pulsion](https://www.fuirestunepulsion.net/) 1 fois par jour
 - [Carnets de La Grange](https://www.la-grange.net/) 7 fois par semaine
+- [Fuir est une pulsion](https://www.fuirestunepulsion.net/) 7 fois par semaine
+- [Alias (erdorin.org)](https://erdorin.org/) 6 fois par semaine
 - [arnaud maïsetti](https://www.arnaudmaisetti.net/spip/) 5 fois par semaine
-- [Alias (erdorin.org)](https://erdorin.org/) 5 fois par semaine
 - [Liminaire](https://liminaire.fr/) 2 fois par semaine
 - [Climb to the Stars](https://climbtothestars.org) 2 fois par semaine
 - [Carnet de notes](https://n.survol.fr) 2 fois par semaine
@@ -72,7 +72,7 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 
 - [marielebert.wordpress.com](https://marielebert.wordpress.com) Un seul article dans le feed
 - [Actualitté](https://actualitte.com/) 23 fois par jour
-- [IDboox](https://www.idboox.com/) 4 fois par jour
+- [IDboox](https://www.idboox.com/) 3 fois par jour
 - [Good E-Reader](https://goodereader.com/blog) 2 fois par jour
 - [les choses dites](https://leschosesdites.wordpress.com) 1 fois par jour
 - [cahiers fantômes](https://cahiersfantomes.com) 1 fois par jour
@@ -98,7 +98,7 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 - [maison[s]témoin](https://www.maisonstemoin.fr) 3 fois par mois
 - [Léonel Houssam](http://leonel-houssam.blogspot.com/) 3 fois par mois
 - [Le Petit Monde de Nicolas Esse » Flux](https://nicolasesse.com) 3 fois par mois
-- [Bajram.com](https://www.bajram.com) 3 fois par mois
+- [Bajram.com](https://www.bajram.com) 2 fois par mois
 - [Stalker - Dissection du cadavre de la littérature](https://www.juanasensio.com/) 2 fois par mois
 - [Hypothermia](https://www.hypothermia.fr) 2 fois par mois
 - [Orion en aéroplane](https://peccadille.wordpress.com) 2 fois par mois
@@ -156,7 +156,7 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 23/10/2025 (liste mise
 
 ### Vélo
 
-- [The Radavist](https://theradavist.com) 6 fois par jour
+- [The Radavist](https://theradavist.com) 5 fois par jour
 - [Bikerumor](https://bikerumor.com/) 5 fois par jour
 - [Vojo](https://www.vojomag.com/) 1 fois par jour
 - [Singletrack World Magazine](https://singletrackworld.com) 6 fois par semaine
