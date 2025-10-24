@@ -295,7 +295,15 @@ def write_markdown(categories, file_path):
 
 def parse_opml_to_categories(root):
     """Parse the OPML root element into a dictionary of categories."""
+    known_urls = {}
     categories = {}
+
+    def process_feed(title, html_url, xml_url):
+        logger.info(f"Processing RSS feed: {xml_url}")
+        stats = rss_stats(xml_url, html_url)
+        logger.info(f"Stats: {stats}")
+        return (title, html_url, stats)
+    
     for category in root.findall('.//outline[@text]'):
         category_title = category.get('title')
         logger.info(category_title)
@@ -306,13 +314,25 @@ def parse_opml_to_categories(root):
             html_url = outline.get('htmlUrl')
             xml_url = outline.get('xmlUrl')
             if title and html_url and xml_url:
-                logger.info(f"Processing RSS feed: {xml_url}")
-                stats = rss_stats(xml_url, html_url)
-                logger.info(f"Stats: {stats}")
-                feeds.append((title, html_url, stats))
+                feeds.append(process_feed(title, html_url, xml_url))
+                known_urls[html_url] = title
         
         if category_title and feeds:
             categories[category_title] = feeds
+
+    """ Flux orphelins """
+    orphan_feeds = []
+    for feed in root.findall('.//outline[@xmlUrl]'):
+        title = feed.get('title')
+        html_url = feed.get('htmlUrl')
+        xml_url = feed.get('xmlUrl')
+
+        if title and html_url and xml_url and html_url not in known_urls:
+            orphan_feeds.append(process_feed(title, html_url, xml_url))
+    
+    if len(orphan_feeds) > 0:
+        categories['~'] = orphan_feeds
+
     return categories
 
 
