@@ -40,4 +40,4 @@ Le résultat se retrouve dans ./output/output.md
 
 ### 4. Paramètre
 
-Par défaut BLOCK_NON_ACTIVE = True, les sites qui fonctionne mais qui n'ont pas mis leur feed à jour de son pas affichés.
+Par défaut BLOCK_NON_ACTIVE = True, les sites qui fonctionnent mais qui n'ont pas mis leur feed à jour ne son pas exportés dans le markdown.
