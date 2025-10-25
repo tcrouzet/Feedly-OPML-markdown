@@ -30,6 +30,8 @@ CANDIDATE_FEEDS = [
 
 USING_CACHE = True
 
+BLOCK_NON_ACTIVE = True  # ne pas afficher les sites sans mise à jour détectée
+
 
 # Vider le log au démarrage
 open(LOG_FILE, "w", encoding="utf-8").close()
@@ -279,19 +281,26 @@ def write_markdown(categories, file_path):
     # Date du jour en JJ/MM/AAAA
     today_str = datetime.now().strftime("%d/%m/%Y")
 
-    with open(file_path, 'w', encoding='utf-8') as md_file:
+    total_sites = 0
+    output = ""
 
+    for category_title in sorted(categories.keys(), key=str.casefold):
+        feeds = categories[category_title]
+        output +=f"### {category_title}\n\n"
+        for title, html_url, stats in feeds:
+            if BLOCK_NON_ACTIVE and stats<1:
+                continue
+            output +=f"- [{title}]({html_url}) {format_stats(stats)}\n"
+            total_sites += 1
+        output +="\n"
+
+    with open(file_path, 'w', encoding='utf-8') as md_file:
         md_file.write(
             f"Les {total_sites} sites suivis sur [Feedly](https://feedly.com/) au {today_str} "
             f"(liste mise en forme avec [Feedly-OPML-markdown](https://github.com/tcrouzet/Feedly-OPML-markdown)).\n\n"
+            f"{output}"
         )
 
-        for category_title in sorted(categories.keys(), key=str.casefold):
-            feeds = categories[category_title]
-            md_file.write(f"### {category_title}\n\n")
-            for title, html_url, stats in feeds:
-                md_file.write(f"- [{title}]({html_url}) {format_stats(stats)}\n")
-            md_file.write("\n")
 
 def parse_opml_to_categories(root):
     """Parse the OPML root element into a dictionary of categories."""

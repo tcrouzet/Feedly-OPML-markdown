@@ -1,4 +1,4 @@
-Les 158 sites suivis sur [Feedly](https://feedly.com/) au 24/10/2025 (liste mise en forme avec [Feedly-OPML-markdown](https://github.com/tcrouzet/Feedly-OPML-markdown)).
+Les 148 sites suivis sur [Feedly](https://feedly.com/) au 25/10/2025 (liste mise en forme avec [Feedly-OPML-markdown](https://github.com/tcrouzet/Feedly-OPML-markdown)).
 
 ### Amis
 
@@ -26,7 +26,6 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 24/10/2025 (liste mise
 - [L'Antre du Greg](https://www.antredugreg.be) 2 fois par an
 - [JCFrogBlog4](http://jcfrog.com/blog) 2 fois par an
 - [Denis Salem | Blog](https://denissalem.ovh/Blog/) 9 fois par décennie
-- [Graphisme et interactivité](https://graphism.fr) Pas d'actualisation
 
 ### NetCulture et Techno
 
@@ -66,7 +65,6 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 24/10/2025 (liste mise
 - [Connecting worlds (Raydacteur)](https://philbancourt.wordpress.com) 2 fois par an
 - [Media Trend](http://www.themediatrend.com/wordpress) 1 fois par an
 - [Un jour Une idée](https://unjouruneidee.wordpress.com) 1 fois par an
-- [Antonio A. Casilli](https://www.bodyspacesociety.eu/) Pas d'actualisation
 
 ### NetLittérature
 
@@ -137,12 +135,6 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 24/10/2025 (liste mise
 - [Les ateliers du déluge (Marlen Sauvage)](https://les-ateliers-du-deluge.com) 1 fois par an
 - [Petite Racine (Cécile Portier)](http://petiteracine.net/wordpress) 1 fois par an
 - [en dehors](http://clayssen.paris) 1 fois par an
-- [atelier de bricolage littéraire](https://www.atelierdebricolage.net) Pas d'actualisation
-- [Critical Margins](https://criticalmargins.com?source=rss----b5830299543c---4) Pas d'actualisation
-- [L'Écrivain Souterrain » Flux](https://ecrivain-souterrain.com) Pas d'actualisation
-- [Marc Jahjah](https://marcjahjah.net) Pas d'actualisation
-- [mot maquis (Juliette Mezenc)](http://motmaquis.net/) Pas d'actualisation
-- [Stéphane Gantelet](https://s-gantelet.over-blog.com/) Pas d'actualisation
 
 ### Photo
 
@@ -173,6 +165,4 @@ Les 158 sites suivis sur [Feedly](https://feedly.com/) au 24/10/2025 (liste mise
 - [Valvert on the road, velo rando 🌐🚲♿](https://valvertontheroad.wordpress.com) 11 fois par an
 - [Lost On A Bike](http://www.lostonabike.com) 5 fois par an
 - [Ad Voyages » Flux](https://www.ad-photos.fr) 4 fois par an
-- [BIKEPACKING.com](https://bikepacking.com/) Pas d'actualisation
-- [Darwin Onthetrail](https://darwinonthetrail.com) Pas d'actualisation
 
